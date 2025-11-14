@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="IMRANE Restaurant - Savor Sky-Inspired Cuisine in a Warm, Elegant Setting">
+    <title>IMRANE - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Montserrat', sans-serif; margin: 0; padding: 0; color: #333; background: #FFF; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        header { position: fixed; top: 0; width: 100%; background: #87CEEB; padding: 10px; z-index: 100; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        nav ul { list-style: none; display: flex; margin: 0; padding: 0; }
+        nav li { margin: 0 15px; }
+        nav a { color: #FFF; text-decoration: none; font-weight: 600; transition: color 0.3s; }
+        nav a:hover { color: #FFD700; }
+        .hamburger { display: none; font-size: 24px; cursor: pointer; color: #FFF; }
+        .reserve-btn { background: #FFD700; color: #4682B4; padding: 10px 20px; border-radius: 5px; text-decoration: none; transition: background 0.3s; }
+        .reserve-btn:hover { background: #4682B4; color: #FFD700; }
+        .hero { height: 100vh; background: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80') center/cover no-repeat; display: flex; align-items: center; justify-content: center; text-align: center; position: relative; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.4); }
+        .hero-content { position: relative; color: #FFF; z-index: 1; }
+        .hero h1 { font-size: 3em; margin: 0; }
+        .hero p { font-size: 1.2em; margin: 20px 0; }
+        section { padding: 60px 20px; max-width: 1200px; margin: 0 auto; }
+        .intro { background: #87CEEB; color: #FFF; text-align: center; }
+        .highlights { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .highlight-card { background: #FFF; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s; }
+        .highlight-card:hover { transform: scale(1.05); }
+        .highlight-card img { width: 100%; height: 200px; object-fit: cover; }
+        .highlight-card h3 { margin: 15px; color: #4682B4; }
+        .highlight-card p { margin: 0 15px; }
+        .highlight-card .price { color: #FFD700; font-weight: 600; margin: 15px; }
+        .testimonials { background: #4682B4; color: #FFF; text-align: center; }
+        .testimonial-carousel { display: flex; overflow: hidden; position: relative; }
+        .testimonial { min-width: 100%; padding: 20px; opacity: 0; transition: opacity 0.5s; }
+        .testimonial.active { opacity: 1; }
+        .cta { background: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80') center/cover no-repeat; color: #FFF; text-align: center; padding: 100px 20px; }
+        .hours { background: #FFF; text-align: center; }
+        footer { background: #87CEEB; color: #FFF; padding: 20px; text-align: center; }
+        footer a { color: #FFD700; text-decoration: none; }
+        @media (max-width: 768px) { nav ul { display: none; } .hamburger { display: block; } .hero h1 { font-size: 2em; } .highlights { grid-template-columns: 1fr; } }
+        @media (max-width: 480px) { .hero { height: 50vh; } section { padding: 40px 10px; } }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">IMRANE</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="blog.html">Blog/News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="reservations.html" class="reserve-btn">Reserve a Table</a>
+            <div class="hamburger">☰</div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to IMRANE</h1>
+            <p>Where Sky-Inspired Flavors Meet Warm Hospitality</p>
+            <a href="reservations.html" class="reserve-btn">Reserve a Table</a>
+        </div>
+    </section>
+
+    <section class="intro">
+        <h2>Discover IMRANE</h2>
+        <p>Nestled under a canopy of blue skies, IMRANE invites you to indulge in a culinary journey that blends tradition with innovation. Our warm, inviting space is designed for unforgettable dining experiences, where every dish tells a story of fresh ingredients and passionate craftsmanship.</p>
+    </section>
+
+    <section class="highlights">
+        <div class="highlight-card">
+            <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Lamb Tagine" loading="lazy">
+            <h3>Lamb Tagine</h3>
+            <p>Tender lamb slow-cooked with spices, served with fluffy couscous—a burst of warmth in every bite.</p>
+            <div class="price">$24</div>
+        </div>
+        <!-- Repeat for 3 more cards with similar structure -->
+    </section>
+
+    <section class="testimonials">
+        <h2>What Our Guests Say</h2>
+        <div class="testimonial-carousel">
+            <div class="testimonial active">"IMRANE's dishes are a delightful escape—fresh, flavorful, and served with genuine warmth. A must-visit!" - Jane Doe</div>
+            <!-- Add more testimonials -->
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2>Ready to Dine?</h2>
+        <a href="reservations.html" class="reserve-btn">Reserve a Table</a>
+    </section>
+
+    <section class="hours">
+        <h2>Our Hours</h2>
+        <p>Monday-Thursday: 5PM-10PM<br>Friday-Saturday: 5PM-11PM<br>Sunday: 4PM-9PM</p>
+        <p>Reservations recommended on weekends.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 IMRANE. All rights reserved.</p>
+        <a href="contact.html">Contact Us</a>
+    </footer>
+
+    <script>
+        // Simple carousel
+        let testimonials = document.querySelectorAll('.testimonial');
+        let current = 0;
+        setInterval(() => {
+            testimonials[current].classList.remove('active');
+            current = (current + 1) % testimonials.length;
+            testimonials[current].classList.add('active');
+        }, 3000);
+    </script>
+</body>
+</html>
